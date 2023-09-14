@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -30,6 +30,13 @@ function App() {
     },
   ]);
 
+  const [book, setBook] = useState({
+    name: "The Fault In Our Stars",
+    author: "John Green",
+    img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+    price: 250,
+  });
+
   const initPayment = async (data) => {
     try {
       const response = await axios.post("/api/payment/orders", {
@@ -40,9 +47,9 @@ function App() {
         key: "rzp_test_QFIqzeKc9MdYW3",
         amount: data.amount,
         currency: data.currency,
-        name: data.name, // Use data.name to get the book name
+        name: book.name,
         description: "Test Transaction",
-        image: data.img, // Use data.img to get the book image
+        image: book.img,
         order_id: orderId,
         handler: async (response) => {
           try {
@@ -64,13 +71,13 @@ function App() {
     }
   };
 
-  const handlePayment = async (book) => { // Pass the selected book as a parameter
+  const handlePayment = async (selectedBook) => {
     try {
       const response = await axios.post("/api/payment/orders", {
-        amount: book.price,
+        amount: selectedBook.price,
       });
       const orderId = response.data.data.id;
-      initPayment({ amount: book.price, currency: "INR", name: book.name, img: book.img, id: orderId });
+      initPayment({ amount: selectedBook.price, currency: "INR", id: orderId });
     } catch (error) {
       console.log(error);
     }
@@ -80,9 +87,9 @@ function App() {
     <div className="App">
       {books.map((book, index) => (
         <div className="book_container" key={index}>
-          <img src={book.img} alt={`book_img_${index}`} className="book_img" />
+          <img src={book.img} alt="book_img" className="book_img" />
           <p className="book_name">{book.name}</p>
-          <p className="book_author">{book.author}</p>
+          <p className="book_author">By {book.author}</p>
           <p className="book_price">
             Price : <span>&#x20B9; {book.price}</span>
           </p>
