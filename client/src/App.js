@@ -6,13 +6,13 @@ function App() {
   const [products, setProducts] = useState([
     {
       name: "Apple iPhone SE (Black, 64 GB)",
-      description: "Compact design with an A13 Bionic chip.", 
+      description: "Compact design with an A13 Bionic chip.",
       img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
       price: 28990,
     },
     {
       name: "APPLE iPhone 11 Pro Max (Gold, 64 GB)",
-      description: "Premium design, A13 Bionic chip", 
+      description: "Premium design, A13 Bionic chip",
       img: "https://rukminim2.flixcart.com/image/416/416/k2jbyq80pkrrdj/mobile-refurbished/e/b/u/iphone-11-pro-max-64-a-mwhg2hn-a-apple-0-original-imafkg2fg3evmhuy.jpeg?q=70",
       price: 95699,
     },
@@ -78,19 +78,23 @@ function App() {
 
   return (
     <div className="App">
-      {products.map((product, index) => (
-        <div className="product_container" key={index}>
-          <img src={product.img} alt={`${product.name}_img`} className="product_img" />
-          <p className="product_name">{product.name}</p>
-          <p className="product_description">{product.description}</p>
-          <p className="product_price">
-            Price : <span>&#x20B9; {product.price}</span>
-          </p>
-          <button onClick={() => handlePayment(product)} className="buy_btn">
-            Buy Now
-          </button>
-        </div>
-      ))}
+      <div className="product-container">
+        {products.map((product, index) => (
+          <div className="product-card" key={index}>
+            <img src={product.img} alt={`${product.name}_img`} className="product-img" />
+            <div className="product-details">
+              <p className="product-name">{product.name}</p>
+              <p className="product-description">{product.description}</p>
+              <p className="product-price">
+                Price : <span>&#x20B9; {product.price}</span>
+              </p>
+              <button onClick={() => handlePayment(product)} className="buy-btn">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
