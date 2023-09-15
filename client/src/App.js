@@ -6,7 +6,7 @@ function App() {
   const [products, setProducts] = useState([
     {
       name: "Apple iPhone 13 (128GB) - Blue",
-      description: "The biggest Pro camera system upgrade ever. Super Retina XDR display with Pro - Motion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Durable design and a huge leap in battery life.",
+      description: "The biggest Pro camera system upgrade ever. Super Retina XDR display with Pro - Motion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Durable design and a huge leap in battery life. 6.1-inch Super Retina XDR display with Pro - Motion for a faster, more responsive feel Cinematic mode adds shallow depth of field and shifts focus automatically in your videos Pro camera system with new 12MP Telephoto, Wide, and Ultra Wide cameras; Li - DAR Scanner; 6x optical zoom range; macro photography; Photographic Styles, Pro - Res video, Smart HDR 4, Night mode, Apple Pro - RAW, 4K Dolby Vision HDR recording 12MP True - Depth front camera with Night mode, 4K Dolby Vision HDR recording A15 Bionic chip for lightning-fast performance Up to 22 hours of video playback Durable design with Ceramic Shield Industry-leading IP68 water resistance 5G capable i - Safe accessories for easy attach and faster wireless charging.",
       img: "https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg",
       price: 55999,
     },
