@@ -5,18 +5,6 @@ import "./App.css";
 function App() {
   const [products, setProducts] = useState([
     {
-      name: "Apple iPhone 13 (128GB) - Blue",
-      description: "Features a powerful A15 Bionic chip, dual-camera system, Super Retina XDR display, and 128GB storage.",
-      img: "https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg",
-      price: 55999,
-    },
-    {
-      name: "Apple iPhone 12 (256GB) - Purple",
-      description: "Offers a stunning Super Retina XDR display, A14 Bionic chip, dual-camera setup, and ample 256GB storage.", 
-      img: "https://m.media-amazon.com/images/I/71hIfcIPyxS._SX679_.jpg",
-      price: 65999,
-    },
-    {
       name: "Apple iPhone SE (Black, 64 GB) (Includes EarPods, Power Adapter)",
       description: "Compact design with an A13 Bionic chip, 64GB storage, and includes EarPods and a power adapter.", 
       img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
