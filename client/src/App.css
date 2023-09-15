@@ -1,88 +1,63 @@
-/* Global styles */
 .App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Product container */
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the column width as needed */
-  gap: 20px; /* Adjust the gap between products */
-  padding: 20px;
-  justify-items: center;
+.book_container {
+	width: 250px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
 }
 
-/* Style for each product card */
-.product-card {
-  width: 100%;
-  border: 1px solid #ddd; /* Add a border for each product card */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-  background-color: white;
-  overflow: hidden; /* Ensure text doesn't overflow */
+.book_img {
+	width: 250px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
-/* Product image */
-.product-img {
-  width: 100%;
-  max-height: 250px; /* Set a maximum height for product images */
-  object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.book_name {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 5px 0;
+	text-align: center;
 }
 
-/* Product details */
-.product-details {
-  padding: 10px;
-  text-align: center;
+.book_author {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 5px 0;
+	text-align: center;
 }
 
-/* Product name */
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px 0;
+.book_price {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 5px 0;
+	text-align: center;
 }
 
-/* Product description */
-.product-description {
-  font-size: 14px;
-  margin: 5px 0;
+.book_price > span {
+	color: #21a700;
 }
 
-/* Product price */
-.product-price {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 5px 0;
-}
-
-/* Price span */
-.product-price > span {
-  color: #21a700;
-}
-
-/* Buy button */
-.buy-btn {
-  width: 100%;
-  height: 40px;
-  outline: none;
-  border: none;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #f4d072;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  transition: background-color 0.3s;
-}
-
-/* Button hover effect */
-.buy-btn:hover {
-  background-color: #e0bb00; /* Change the button color on hover */
+.buy_btn {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #f4d072;
+	margin-top: 10px;
 }
