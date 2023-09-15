@@ -5,34 +5,34 @@ import "./App.css";
 function App() {
   const [books, setBooks] = useState([
     {
-      name: "iPhone 13 Pro",
+      name: "Apple iPhone 13 (256GB)",
       description: "The latest iPhone with Pro features.",
-      img: "https://example.com/iphone13pro.jpg",
-      price: 1099,
+      img: "https://m.media-amazon.com/images/I/315oQlfQ6WL._SY445_SX342_QL70_FMwebp_.jpg",
+      price: 64999,
     },
     {
-      name: "iPhone 12",
+      name: "Apple iPhone 12 (256GB)",
       description: "A powerful iPhone with great features.",
-      img: "https://example.com/iphone12.jpg",
-      price: 799,
+      img: "https://m.media-amazon.com/images/I/71ZOtNdaZCL._SX679_.jpg",
+      price: 65999,
     },
     {
-      name: "iPhone SE",
+      name: "Apple iPhone SE (Black, 64 GB)",
       description: "A compact and affordable iPhone.",
-      img: "https://example.com/iphonese.jpg",
-      price: 399,
+      img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
+      price: 28990,
     },
     {
-      name: "iPhone 11 Pro Max",
+      name: "APPLE iPhone 11 Pro Max (Gold, 64 GB)",
       description: "A larger iPhone with Pro capabilities.",
-      img: "https://example.com/iphone11promax.jpg",
-      price: 999,
+      img: "https://rukminim2.flixcart.com/image/416/416/k2jbyq80pkrrdj/mobile-refurbished/e/b/u/iphone-11-pro-max-64-a-mwhg2hn-a-apple-0-original-imafkg2fg3evmhuy.jpeg?q=70",
+      price: 95699,
     },
     {
-      name: "iPhone XR",
+      name: "Apple iPhone XR (Black, 128 GB)",
       description: "A colorful and budget-friendly iPhone.",
-      img: "https://example.com/iphonexr.jpg",
-      price: 499,
+      img: "https://rukminim2.flixcart.com/image/416/416/jnj7iq80/mobile/u/b/g/apple-iphone-xr-mryj2hn-a-original-imafa6zkm7qhv2zd.jpeg?q=70",
+      price: 41699,
     }
   ]);
 
@@ -90,7 +90,7 @@ function App() {
           <p className="book_name">{book.name}</p>
           <p className="book_description">Description: {book.description}</p>
           <p className="book_price">
-            Price : <span>&#x20B9; {book.price}</span>
+            Price : ₹ <span>&#x20B9; {book.price}</span>
           </p>
           <button onClick={() => handlePayment(book)} className="buy_btn">
             Buy Now
