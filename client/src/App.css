@@ -136,8 +136,7 @@
   background-color: #e0bb00; /* Change the button color on hover */
 }
 /* Add these styles to your existing CSS */
-
-/* Container for the products */
+/* Updated CSS for the grid layout */
 .product-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the column width as needed */
@@ -145,6 +144,8 @@
   padding: 20px;
   justify-items: center;
 }
+
+
 
 /* Style for each product */
 .product-card {
