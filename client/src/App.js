@@ -1,28 +1,17 @@
+
+
+
 import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [products, setProducts] = useState([
-    {
-      name: "Apple iPhone SE (Black, 64 GB)",
-      description: "Compact design with an A13 Bionic chip.",
-      img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
-      price: 28990,
-    },
-    {
-      name: "APPLE iPhone 11 Pro Max (Gold, 64 GB)",
-      description: "Premium design, A13 Bionic chip",
-      img: "https://rukminim2.flixcart.com/image/416/416/k2jbyq80pkrrdj/mobile-refurbished/e/b/u/iphone-11-pro-max-64-a-mwhg2hn-a-apple-0-original-imafkg2fg3evmhuy.jpeg?q=70",
-      price: 95699,
-    },
-    {
-      name: "Apple iPhone XR (Black, 128 GB)",
-      description: "Liquid Retina display, A12 Bionic chip, and 128GB storage.",
-      img: "https://rukminim2.flixcart.com/image/416/416/jnj7iq80/mobile/u/b/g/apple-iphone-xr-mryj2hn-a-original-imafa6zkm7qhv2zd.jpeg?q=70",
-      price: 41699,
-    },
-  ]);
+  const [book, setBook] = useState({
+    name: "The Fault In Our Stars",
+    author: "John Green",
+    img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+    price: 250,
+  });
 
   const initPayment = async (data) => {
     try {
@@ -34,9 +23,9 @@ function App() {
         key: "rzp_test_QFIqzeKc9MdYW3",
         amount: data.amount,
         currency: data.currency,
-        name: data.name, // Use product name instead of book name
+        name: book.name,
         description: "Test Transaction",
-        image: data.img, // Use product image instead of book image
+        image: book.img,
         order_id: orderId,
         handler: async (response) => {
           try {
@@ -58,19 +47,13 @@ function App() {
     }
   };
 
-  const handlePayment = async (product) => {
+  const handlePayment = async () => {
     try {
       const response = await axios.post("https://razorpay-mern.onrender.com/api/payment/orders", {
-        amount: product.price,
+        amount: book.price,
       });
       const orderId = response.data.data.id;
-      initPayment({
-        amount: product.price,
-        currency: "INR",
-        id: orderId,
-        name: product.name,
-        img: product.img,
-      });
+      initPayment({ amount: book.price, currency: "INR", id: orderId });
     } catch (error) {
       console.log(error);
     }
@@ -78,22 +61,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="product-container">
-        {products.map((product, index) => (
-          <div className="product-card" key={index}>
-            <img src={product.img} alt={`${product.name}_img`} className="product-img" />
-            <div className="product-details">
-              <p className="product-name">{product.name}</p>
-              <p className="product-description">{product.description}</p>
-              <p className="product-price">
-                Price : <span>&#x20B9; {product.price}</span>
-              </p>
-              <button onClick={() => handlePayment(product)} className="buy-btn">
-                Buy Now
-              </button>
-            </div>
-          </div>
-        ))}
+      <div className="book_container">
+        <img src={book.img} alt="book_img" className="book_img" />
+        <p className="book_name">{book.name}</p>
+        <p className="book_author">By {book.author}</p>
+        <p className="book_price">
+          Price : <span>&#x20B9; {book.price}</span>
+        </p>
+        <button onClick={handlePayment} className="buy_btn">
+          Buy Now
+        </button>
       </div>
     </div>
   );
