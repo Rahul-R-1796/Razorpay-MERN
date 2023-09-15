@@ -79,7 +79,7 @@ function App() {
           <p className="book_name">{book.name}</p>
           <p className="book_description">Description: {book.description}</p>
           <p className="book_price">
-            Price : ₹ <span>&#x20B9; {book.price}</span>
+            Price : <span>&#x20B9; {book.price}</span>
           </p>
           <button onClick={() => handlePayment(book)} className="buy_btn">
             Buy Now
