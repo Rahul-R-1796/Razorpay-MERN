@@ -18,7 +18,7 @@ function App() {
     },
 
     {
-      name: "Apple iPhone 14 Pro (128 GB) - Deep Purple",
+      name: "Apple iPhone 14 (128 GB)",
       description: "A larger iPhone with Pro capabilities.",
       img: "https://m.media-amazon.com/images/I/31MX9scnEzL._SY445_SX342_QL70_FMwebp_.jpg",
       price: 119999,
