@@ -5,10 +5,10 @@ import "./App.css";
 function App() {
   const [products, setProducts] = useState([
     {
-      name: "iPhone 13 Pro",
-      description: "The latest iPhone with Pro features.",
-      img: "https://example.com/iphone13pro.jpg",
-      price: 1099,
+      name: "Apple iPhone 13 (128GB) - Blue",
+      description: "The biggest Pro camera system upgrade ever. Super Retina XDR display with Pro - Motion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Durable design and a huge leap in battery life.",
+      img: "https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg",
+      price: 55999,
     },
     {
       name: "iPhone 12",
