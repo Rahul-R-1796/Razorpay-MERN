@@ -16,23 +16,12 @@ function App() {
       img: "https://m.media-amazon.com/images/I/71ZOtNdaZCL._SX679_.jpg",
       price: 65999,
     },
+
     {
-      name: "Apple iPhone SE (Black, 64 GB)",
-      description: "A compact and affordable iPhone.",
-      img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
-      price: 28990,
-    },
-    {
-      name: "APPLE iPhone 11 Pro Max (Gold, 64 GB)",
+      name: "Apple iPhone 14 Pro (128 GB) - Deep Purple",
       description: "A larger iPhone with Pro capabilities.",
-      img: "https://rukminim2.flixcart.com/image/416/416/k2jbyq80pkrrdj/mobile-refurbished/e/b/u/iphone-11-pro-max-64-a-mwhg2hn-a-apple-0-original-imafkg2fg3evmhuy.jpeg?q=70",
-      price: 95699,
-    },
-    {
-      name: "Apple iPhone XR (Black, 128 GB)",
-      description: "A colorful and budget-friendly iPhone.",
-      img: "https://rukminim2.flixcart.com/image/416/416/jnj7iq80/mobile/u/b/g/apple-iphone-xr-mryj2hn-a-original-imafa6zkm7qhv2zd.jpeg?q=70",
-      price: 41699,
+      img: "https://m.media-amazon.com/images/I/31MX9scnEzL._SY445_SX342_QL70_FMwebp_.jpg",
+      price: 1,19,999,
     }
   ]);
 
