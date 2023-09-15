@@ -6,12 +6,38 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [book, setBook] = useState({
-    name: "The Fault In Our Stars",
-    author: "John Green",
-    img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
-    price: 250,
-  });
+  const [book, setBook] = useState(
+                                    {
+      name: "iPhone 13 Pro",
+      description: "The latest iPhone with Pro features.",
+      img: "https://example.com/iphone13pro.jpg",
+      price: 1099,
+    },
+    {
+      name: "iPhone 12",
+      description: "A powerful iPhone with great features.",
+      img: "https://example.com/iphone12.jpg",
+      price: 799,
+    },
+    {
+      name: "iPhone SE",
+      description: "A compact and affordable iPhone.",
+      img: "https://example.com/iphonese.jpg",
+      price: 399,
+    },
+    {
+      name: "iPhone 11 Pro Max",
+      description: "A larger iPhone with Pro capabilities.",
+      img: "https://example.com/iphone11promax.jpg",
+      price: 999,
+    },
+    {
+      name: "iPhone XR",
+      description: "A colorful and budget-friendly iPhone.",
+      img: "https://example.com/iphonexr.jpg",
+      price: 499,
+    } 
+    );
 
   const initPayment = async (data) => {
     try {
@@ -64,7 +90,7 @@ function App() {
       <div className="book_container">
         <img src={book.img} alt="book_img" className="book_img" />
         <p className="book_name">{book.name}</p>
-        <p className="book_author">By {book.author}</p>
+        <p className="book_description">description: {book.description}</p>
         <p className="book_price">
           Price : <span>&#x20B9; {book.price}</span>
         </p>
